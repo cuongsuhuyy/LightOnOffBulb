@@ -7,7 +7,9 @@ namespace LightOnOffExercise
     {
         static void Main(string[] args)
         {
-            bool isContinue = false;
+            bool isContinue;
+            int lightOn = 1;
+            int lightOff = 0;
             do 
             {
                 List<int> stateOfBulb = new List<int>();
@@ -22,13 +24,13 @@ namespace LightOnOffExercise
                 {
                     if (i == 0)
                     {
-                        if (countTimesTurnOnOffOfBulb % 2 == 0) stateOfBulb.Add(0);
-                        else stateOfBulb.Add(1);
+                        if (countTimesTurnOnOffOfBulb % 2 == 0) stateOfBulb.Add(lightOff);
+                        else stateOfBulb.Add(lightOn);
                     }
 
                     currentTimesTurnOnOffBulb /= 2;
-                    if (currentTimesTurnOnOffBulb % 2 == 0) stateOfBulb.Add(0);
-                    else stateOfBulb.Add(1);
+                    if (currentTimesTurnOnOffBulb % 2 == 0) stateOfBulb.Add(lightOff);
+                    else stateOfBulb.Add(lightOn);
                 }
 
                 Console.Write("Trang thai cua bong den la: ");
